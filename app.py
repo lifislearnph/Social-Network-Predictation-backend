@@ -25,7 +25,7 @@ def load_data():
         if json_data:  # 如果全局变量有数据，直接使用
             data = json_data
         else:          # 否则读取默认文件
-            with open('../public/default-data.json', 'r', encoding='utf-8') as f:
+            with open('default-data.json', 'r', encoding='utf-8') as f:
                 data = json.load(f)
         
         G = nx.Graph()
@@ -181,7 +181,7 @@ def init_data():
     else:
         print('Using default JSON data')
         try:
-            with open('../public/default-data.json', 'r', encoding='utf-8') as f:
+            with open('default-data.json', 'r', encoding='utf-8') as f:
                 data = json.load(f)
             return data
         except Exception as e:
